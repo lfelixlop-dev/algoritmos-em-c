@@ -1,0 +1,19 @@
+# Executaveis gerados na compilacao
+*.exe
+*.out
+*.o
+treinos_simples
+controle_treinos
+
+# Arquivos de IDE
+.vscode/
+*.dev
+*.layout
+*.depend
+*.cbp
+bin/
+obj/
+
+# Sistema
+.DS_Store
+Thumbs.db
