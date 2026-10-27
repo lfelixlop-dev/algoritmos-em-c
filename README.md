@@ -8,6 +8,7 @@ Repositório com os programas desenvolvidos na disciplina **Algoritmo e Pensamen
 |---|---|---|
 | [`01-controle-treinos-simples`](./01-controle-treinos-simples) | Menu de treinos e calorias, tudo dentro da `main` | `while`, `do-while`, `if/else`, `switch` |
 | [`02-controle-treinos-completo`](./02-controle-treinos-completo) | Versão ampliada, com relatório por atividade | arrays, funções, `#define`, validação reutilizável |
+| [`03-sistema-pedagio`](./03-sistema-pedagio) | Contagem de carros por dia da semana, com destaque em negrito para os dias de pico | vetor, matriz, `for` aninhado, `while`, formatação com `printf` |
 
 ## Controle de Treinos e Calorias
 
@@ -71,6 +72,23 @@ Queima estimada: 343 kcal
 ```
 
 *(Exemplo com peso de 70 kg.)*
+
+## Sistema de Pedágio
+
+Programa de terminal que registra a quantidade de carros por dia da semana ao longo de 4 semanas e **destaca em negrito os dias de pico**.
+
+- **Matriz** `carros[SEMANAS][DIAS]`: linha = semana, coluna = dia da semana.
+- **Vetor** `totalDia[DIAS]`: total acumulado de cada dia, recalculado com `for` aninhado.
+- **Menu** com `while`: registrar carros, ver tabela semanal, ver relatório com dias de pico e zerar dados.
+- **Saída formatada**: colunas alinhadas com `printf` (`%8d`, `%-9s`, `%9.1f`), divisórias, gráfico de barras com `#` e negrito via sequências ANSI (`\033[1m` e `\033[0m`).
+
+```bash
+cd 03-sistema-pedagio
+gcc pedagio.c -o pedagio
+./pedagio        # no Windows: pedagio.exe
+```
+
+> O negrito funciona em Linux, macOS e Windows 10 ou superior. Em consoles antigos podem aparecer símbolos como `←[1m`.
 
 ## Decisões técnicas
 
